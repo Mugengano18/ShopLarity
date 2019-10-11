@@ -14,14 +14,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:iconifiedByDefault="false"
-        android:queryHint="Search Here"
-        android:layout_marginLeft="20dp"/>
+        android:queryHint="Search Here">
+        <requestFocus/>
+    </SearchView>
+
 
     <GridView
         android:id="@+id/grid1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
-        android:numColumns="2" />
+        android:numColumns="2" >
+
+    </GridView>
+
+
+
 
 </RelativeLayout>
