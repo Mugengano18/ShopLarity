@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".AntiquityActivity">
 
+
+<!--    <SearchView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:iconifiedByDefault="false"-->
+<!--        android:queryHint="Search Here">-->
+<!--        <requestFocus/>-->
+<!--    </SearchView>-->
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
