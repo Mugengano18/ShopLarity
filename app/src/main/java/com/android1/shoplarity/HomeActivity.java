@@ -37,34 +37,37 @@ public class HomeActivity extends AppCompatActivity {
         imageGrid.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String index=names[position];
-                if(index=="1"){
-                        Intent intention1=new Intent(HomeActivity.this,ClothesActivity.class);
-                        startActivity(intention1);
-                    }else if(index=="2"){
-                        Intent intention2=new Intent(HomeActivity.this,ShoesActivity.class);
-                        startActivity(intention2);
-                    }
-                    else if(index=="3"){
-                        Intent intention3=new Intent(HomeActivity.this,carsActivity.class);
-                        startActivity(intention3);
-                    }
-                    else if(index=="4"){
-                        Intent intention4=new Intent(HomeActivity.this,furnitureActivity.class);
-                        startActivity(intention4);
-                    }
-                    else if(index=="5"){
-                        Intent intention5=new Intent(HomeActivity.this,ShoesActivity.class);
-                        startActivity(intention5);
-                    }
-                    else if(index=="6"){
-                        Intent intention6=new Intent(HomeActivity.this,ShoesActivity.class);
-                        startActivity(intention6);
-                    }
-                    else if(index=="7"){
-                        Intent intention7=new Intent(HomeActivity.this,ShoesActivity.class);
-                        startActivity(intention7);
-                    }
+
+                switch (position){
+                    case 0:
+                        Intent intent1=new Intent(HomeActivity.this,ClothesActivity.class);
+                        startActivity(intent1);
+                        break;
+                    case 1:
+                        Intent intent2=new Intent(HomeActivity.this,ShoesActivity.class);
+                        startActivity(intent2);
+                        break;
+                    case 2:
+                        Intent intent3=new Intent(HomeActivity.this,carsActivity.class);
+                        startActivity(intent3);
+                        break;
+                    case 3:
+                        Intent intent4=new Intent(HomeActivity.this,furnitureActivity.class);
+                        startActivity(intent4);
+                        break;
+                    case 4:
+                        Intent intent5=new Intent(HomeActivity.this,devicesActivity.class);
+                        startActivity(intent5);
+                        break;
+                    case 5:
+                        Intent intent6=new Intent(HomeActivity.this,mobilephoneactivity.class);
+                        startActivity(intent6);
+                        break;
+                    case 6:
+                        Intent intent7=new Intent(HomeActivity.this,AntiquityActivity.class);
+                        startActivity(intent7);
+                        break;
+                }
 
                 Toast.makeText(getApplicationContext(),((TextView) view.findViewById(R.id.textView)).getText(),Toast.LENGTH_SHORT).show();
             }
