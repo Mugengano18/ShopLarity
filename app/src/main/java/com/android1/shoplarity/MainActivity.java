@@ -2,21 +2,35 @@ package com.android1.shoplarity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.graphics.Typeface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
-import android.widget.GridView;
 
-import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
-    GridView imageGrid;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    @BindView(R.id.getStarted)
+    Button  getStarted;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        imageGrid=(GridView)findViewById(R.id.grid1);
-        categoryAdapter imgadapter = new categoryAdapter(this);
-        imageGrid.setAdapter(imgadapter);
+        ButterKnife.bind(this);
+
+        getStarted.setOnClickListener(this);
+
 }
+    @Override
+    public void onClick(View v) {
+        if (v== getStarted){
+            Intent intention =new Intent(MainActivity.this,HomeActivity.class);
+            startActivity(intention);
+        }
+    }
+
+
 }

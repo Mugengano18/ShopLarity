@@ -6,23 +6,29 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class categoryAdapter extends BaseAdapter {
     Context context;
-    private int[] foto_id={R.drawable.foto1,R.drawable.foto2,R.drawable.foto3,R.drawable.foto4,R.drawable.foto5,R.drawable.foto6,R.drawable.foto7};
+    private int[] foto_id;
+    private String[] description;
 
-    categoryAdapter(Context context){
-        this.context=context;
+    public categoryAdapter(Context context, int[] foto_id, String[] description) {
+        this.context = context;
+        this.foto_id = foto_id;
+        this.description = description;
     }
+
+
 
     @Override
     public int getCount() {
-        return foto_id.length;
+        return description.length;
     }
 
     @Override
     public Object getItem(int position) {
-        return foto_id[position];
+        return description[position];
     }
 
     @Override
@@ -32,7 +38,9 @@ public class categoryAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+
         View foto_view=convertView;
+
         if (foto_view==null){
             LayoutInflater insert=(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             foto_view=insert.inflate(R.layout.categoryitems,null);
@@ -40,7 +48,9 @@ public class categoryAdapter extends BaseAdapter {
         }
 
         ImageView image=(ImageView)foto_view.findViewById(R.id.foto);
+        TextView text=(TextView)foto_view.findViewById(R.id.textView);
         image.setImageResource(foto_id[position]);
+        text.setText(description[position]);
         return foto_view;
     }
 }
