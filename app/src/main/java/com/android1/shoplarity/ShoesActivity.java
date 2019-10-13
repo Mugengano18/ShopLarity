@@ -22,8 +22,6 @@ public class ShoesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shoes);
         ButterKnife.bind(this);
-        Intent intent = getIntent();
-        shoeslist=(ListView)findViewById(R.id.listview2);
         shoesAdapter shoesAdapter=new shoesAdapter(this,android.R.layout.simple_list_item_1,shoes);
         shoeslist.setAdapter(shoesAdapter);
 
