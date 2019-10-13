@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 }
     @Override
-    public void onClick(View v) {
+    public void onClick(View v) {//these codes will direct you to the next activity
         if (v== getStarted){
             String names =name.getText().toString();
             Intent intention =new Intent(MainActivity.this,HomeActivity.class);

@@ -5,7 +5,7 @@ import android.widget.ArrayAdapter;
 
 import androidx.annotation.NonNull;
 
-public class mobileAdapter extends ArrayAdapter {
+public class mobileAdapter extends ArrayAdapter {//the array adapter is used different to the base adapter
     Context context;
     private String[] cell;
 

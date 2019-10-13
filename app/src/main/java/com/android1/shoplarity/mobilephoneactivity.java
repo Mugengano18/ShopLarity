@@ -17,7 +17,6 @@ public class mobilephoneactivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mobilephoneactivity);
         ButterKnife.bind(this);
-        phones=(ListView)findViewById(R.id.listview4);
         mobileAdapter mobileAdapter=new mobileAdapter(this,android.R.layout.simple_list_item_1,phone);
         phones.setAdapter(mobileAdapter);
     }

@@ -8,7 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class categoryAdapter extends BaseAdapter {
+public class categoryAdapter extends BaseAdapter {//the base adapter containes mainly most of the functionality
     Context context;
     private int[] foto_id;
     private String[] description;

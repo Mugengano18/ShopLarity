@@ -71,7 +71,7 @@ public class HomeActivity extends AppCompatActivity{
                 Toast.makeText(getApplicationContext(),((TextView) view.findViewById(R.id.textView)).getText(),Toast.LENGTH_SHORT).show();
             }
         });
-        greet.setText("Welcome  "+greeting);
+        greet.setText("Welcome  "+greeting);//this is the name entered by the user
 
 
     }
