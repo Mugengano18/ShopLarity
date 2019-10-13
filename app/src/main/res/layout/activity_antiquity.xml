@@ -16,4 +16,12 @@
         android:text="Antiquity"
         android:layout_centerHorizontal="true"
         android:textSize="40dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sorry no antiquities  are currently for sale"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"
+        android:layout_marginTop="100dp"/>
 </RelativeLayout>

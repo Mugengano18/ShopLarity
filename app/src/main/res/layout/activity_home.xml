@@ -12,20 +12,38 @@
 
 
 
-    <SearchView
+<!--    <SearchView-->
+<!--        android:id="@+id/cherche"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:iconifiedByDefault="false"-->
+<!--        android:queryHint="Search Here">-->
+<!--        <requestFocus/>-->
+<!--    </SearchView>-->
+
+    <TextView
+        android:id="@+id/hello"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:iconifiedByDefault="false"
-        android:queryHint="Search Here">
-        <requestFocus/>
-    </SearchView>
+        android:text="Hello"
+        android:textSize="30dp"
+        app:fontFamily="@font/amita_bold"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Buy anthing You Want"
+        android:textSize="30dp"
+        app:fontFamily="@font/amita_bold"
+        android:layout_centerHorizontal="true"/>
 
 
     <GridView
         android:id="@+id/grid1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="110dp"
         android:numColumns="2" >
 
     </GridView>

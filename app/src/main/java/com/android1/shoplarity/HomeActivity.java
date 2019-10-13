@@ -10,17 +10,20 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.GridView;
+import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity{
     @BindView(R.id.grid1)
     GridView imageGrid;
     private String[]names={"Clothes","Shoes","Cars","Furniture","Devices","Phones","Antique"};
     private int[] foto_id={R.drawable.foto1,R.drawable.foto2,R.drawable.foto3,R.drawable.foto4,R.drawable.foto5,R.drawable.foto6,R.drawable.foto7};
+    @BindView(R.id.hello)
+    TextView greet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,9 +31,9 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         ButterKnife.bind(this);
         Intent intent=getIntent();
+        String greeting = intent.getStringExtra("name");
         imageGrid=(GridView)findViewById(R.id.grid1);
 
-        imageGrid=(GridView) findViewById(R.id.grid1);
 
         categoryAdapter categoryAdapter=new categoryAdapter(HomeActivity.this,foto_id,names);
         imageGrid.setAdapter(categoryAdapter);
@@ -72,6 +75,7 @@ public class HomeActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),((TextView) view.findViewById(R.id.textView)).getText(),Toast.LENGTH_SHORT).show();
             }
         });
+        greet.setText("Welcome  "+greeting);
 
 
     }
