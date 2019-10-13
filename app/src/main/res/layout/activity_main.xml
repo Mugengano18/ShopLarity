@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/home3"
+        android:src="@drawable/photo2"
         />
 
 
@@ -23,6 +23,8 @@
         android:layout_marginTop="30dp"
         android:text="ShopLarity"
         android:textSize="50dp"
+        android:tint="#6F000000"
+        android:textColor="@color/button"
         />
 
     <TextView
@@ -32,6 +34,7 @@
         android:text="Get second hands products,Anywhere Anytime"
         android:textSize="20dp"
         android:gravity="center_horizontal"
+        android:textColor="@color/button"
         android:layout_marginTop="150dp"/>
 
     <EditText
@@ -40,7 +43,10 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:hint="Enter Your name"
-        android:layout_marginTop="400dp"/>
+        android:layout_marginTop="400dp"
+        android:textColor="@color/button"
+        android:textColorHint="@color/button"
+        android:backgroundTint="@color/button"/>
 
     <Button
         android:id="@+id/getStarted"
