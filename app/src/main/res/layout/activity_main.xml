@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/photo2"
+        android:src="@drawable/homepa"
         />
 
 
@@ -24,7 +24,6 @@
         android:text="ShopLarity"
         android:textSize="50dp"
         android:tint="#6F000000"
-        android:textColor="@color/button"
         />
 
     <TextView
