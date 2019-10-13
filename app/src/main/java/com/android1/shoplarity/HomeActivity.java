@@ -8,9 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.Button;
 import android.widget.GridView;
-import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,15 +30,13 @@ public class HomeActivity extends AppCompatActivity{
         ButterKnife.bind(this);
         Intent intent=getIntent();
         String greeting = intent.getStringExtra("name");
-        imageGrid=(GridView)findViewById(R.id.grid1);
-
-
         categoryAdapter categoryAdapter=new categoryAdapter(HomeActivity.this,foto_id,names);
         imageGrid.setAdapter(categoryAdapter);
         imageGrid.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+                //this is switch case to help me get to a specific activity depending on the pressed Image
                 switch (position){
                     case 0:
                         Intent intent1=new Intent(HomeActivity.this,ClothesActivity.class);

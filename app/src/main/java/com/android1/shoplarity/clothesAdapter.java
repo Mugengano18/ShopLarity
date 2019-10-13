@@ -1,13 +1,8 @@
 package com.android1.shoplarity;
 
 import android.content.Context;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
-import android.widget.ListView;
-import android.widget.TextView;
+
 
 import androidx.annotation.NonNull;
 
@@ -16,7 +11,7 @@ public class clothesAdapter extends ArrayAdapter {
     private String clothes[];
 
 
-    public clothesAdapter(@NonNull Context context, int resource,String[] clothes) {
+    public clothesAdapter(@NonNull Context context, int resource,String[] clothes) {//this is an array adapter
         super(context, resource);
         this.context=context;
         this.clothes=clothes;

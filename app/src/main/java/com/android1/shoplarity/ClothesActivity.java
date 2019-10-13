@@ -22,10 +22,8 @@ public class ClothesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_clothes);
         ButterKnife.bind(this);
-        Intent intent = getIntent();
-        clotheslist=(ListView)findViewById(R.id.listview1);
         clothesAdapter clothesAdapter=new clothesAdapter(this,android.R.layout.simple_list_item_1,clothes);
-        clotheslist.setAdapter(clothesAdapter);
+        clotheslist.setAdapter(clothesAdapter);//this is used to show the list of clothes
         clotheslist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
