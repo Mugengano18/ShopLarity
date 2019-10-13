@@ -12,7 +12,13 @@
 
 
 
-
+    <SearchView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:iconifiedByDefault="false"
+        android:queryHint="Search Here">
+        <requestFocus/>
+    </SearchView>
 
 
     <GridView
@@ -23,11 +29,11 @@
         android:numColumns="2" >
 
     </GridView>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="Choose from the categories:"
-        android:textSize="25dp"
-        app:fontFamily="@font/amita_bold" />
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:text="Choose from the categories:"-->
+<!--        android:textSize="25dp"-->
+<!--        app:fontFamily="@font/amita_bold" />-->
 </RelativeLayout>
