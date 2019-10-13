@@ -1,5 +1,5 @@
 # ShopLarity
-this is an App where by there will be selling and buying of different used productsfrom anyone who wants to give away his/her products.
+- this is an App where by there will be selling and buying of different used productsfrom anyone who wants to give away his/her products.
 
 ## Author
 - Mugengano18
