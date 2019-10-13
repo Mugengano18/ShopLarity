@@ -1,13 +1,14 @@
 # ShopLarity
-- By Mugengano alice
-
 this is an App where by there will be selling and buying of different used productsfrom anyone who wants to give away his/her products.
+
+## Author
+- Mugengano18
+
 
 ## App Installation
 
 - In case you want to install or to get a the app by this time it is not finished yet but in few weeks it will be done
 - In case you want reference just look at this link [Shoplarity][https://github.com/Mugengano18/ShopLarity]
-
 
 ## Description(Application setup)
 
@@ -21,7 +22,9 @@ this is an App where by there will be selling and buying of different used produ
 - Android studio editor
 - Xml
 
+## Contacts
 
+- E-mail:mugenganoa@gmail.com
 
 
 
