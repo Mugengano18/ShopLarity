@@ -17,7 +17,6 @@ public class carsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cars);
         ButterKnife.bind(this);
-        carslist=(ListView)findViewById(R.id.listview3);
         carsAdapter carsAdapter=new carsAdapter(this,android.R.layout.simple_list_item_1,cars);
         carslist.setAdapter(carsAdapter);
     }
