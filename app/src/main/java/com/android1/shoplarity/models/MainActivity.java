@@ -1,4 +1,4 @@
-package com.android1.shoplarity;
+package com.android1.shoplarity.models;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+
+import com.android1.shoplarity.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -31,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {//these codes will direct you to the next activity
         if (v== getStarted){
             String names =name.getText().toString();
-            Intent intention =new Intent(MainActivity.this,HomeActivity.class);
+            Intent intention =new Intent(MainActivity.this, HomeActivity.class);
             intention.putExtra("name",names);
             startActivity(intention);
         }

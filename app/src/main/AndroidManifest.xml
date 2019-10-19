@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.android1.shoplarity">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,55 +11,58 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AntiquityActivity">
+        <activity android:name=".models.childrenList"></activity>
+        <activity android:name=".models.MenList" />
+        <activity android:name=".models.womenList" />
+        <activity android:name=".models.AntiquityActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.android1.shoplarity.HomeActivity" />
+                android:value="com.android1.shoplarity.models.HomeActivity" />
         </activity>
-        <activity android:name=".mobilephoneactivity">
+        <activity android:name=".models.mobilephoneactivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.android1.shoplarity.HomeActivity" />
+                android:value="com.android1.shoplarity.models.HomeActivity" />
         </activity>
-        <activity android:name=".devicesActivity">
+        <activity android:name=".models.devicesActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.android1.shoplarity.HomeActivity" />
+                android:value="com.android1.shoplarity.models.HomeActivity" />
         </activity>
-        <activity android:name=".furnitureActivity">
+        <activity android:name=".models.furnitureActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.android1.shoplarity.HomeActivity" />
+                android:value="com.android1.shoplarity.models.HomeActivity" />
         </activity>
-        <activity android:name=".carsActivity">
+        <activity android:name=".models.carsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.android1.shoplarity.HomeActivity" />
+                android:value="com.android1.shoplarity.models.HomeActivity" />
         </activity>
-        <activity android:name=".ShoesActivity">
+        <activity android:name=".models.ShoesActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.android1.shoplarity.HomeActivity" />
+                android:value="com.android1.shoplarity.models.HomeActivity" />
         </activity>
-        <activity android:name=".ClothesActivity">
+        <activity android:name=".models.ClothesActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.android1.shoplarity.HomeActivity" />
+                android:value="com.android1.shoplarity.models.HomeActivity" />
         </activity>
-        <activity android:name=".HomeActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.android1.shoplarity.MainActivity" />
-        </activity>
-        <activity
-            android:name=".MainActivity"
-            android:theme="@style/NoActionBarTheme">
+        <activity android:name=".models.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.android1.shoplarity.models.MainActivity" />
         </activity>
+        <activity
+            android:name=".models.MainActivity"
+            android:theme="@style/NoActionBarTheme" />
 
         <meta-data
             android:name="preloaded_fonts"

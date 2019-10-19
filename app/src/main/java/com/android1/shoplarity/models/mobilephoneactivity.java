@@ -1,9 +1,12 @@
-package com.android1.shoplarity;
+package com.android1.shoplarity.models;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.ListView;
+
+import com.android1.shoplarity.R;
+import com.android1.shoplarity.Adapters.mobileAdapter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

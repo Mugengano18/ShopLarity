@@ -1,8 +1,10 @@
-package com.android1.shoplarity;
+package com.android1.shoplarity.models;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.android1.shoplarity.R;
 
 public class AntiquityActivity extends AppCompatActivity {
 

@@ -13,17 +13,16 @@
         android:layout_width="160dp"
         android:layout_height="160dp"
         android:scaleType="fitXY"
-        android:src="@drawable/foto1"
-        android:tint="#6F000000" />
+        android:tint="#6F000000"
+        android:src="@drawable/roundingimage"/>
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="90dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="170dp"
         android:text="Clothes"
-        android:textColor="@color/button"
         android:textSize="25dp"
         app:fontFamily="@font/acme" />
 

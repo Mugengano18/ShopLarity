@@ -1,4 +1,4 @@
-package com.android1.shoplarity;
+package com.android1.shoplarity.Adapters;
 
 import android.content.Context;
 import android.widget.ArrayAdapter;
