@@ -7,16 +7,20 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.android1.shoplarity.Adapters.womenllistAdapter;
+import com.android1.shoplarity.Apifolder.Category;
+import com.android1.shoplarity.Apifolder.Location;
 import com.android1.shoplarity.R;
 import com.android1.shoplarity.network.Client;
 import com.android1.shoplarity.network.Api;
 import com.android1.shoplarity.Apifolder.Business;
 import com.android1.shoplarity.Apifolder.Apiresponse;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -52,11 +56,27 @@ public class womenList extends AppCompatActivity {
                 if(response.isSuccessful()){
                     List<Business>womenlist = response.body().getBusinesses();
                     String[] womenclothe=new String[womenlist.size()];
+                    String[] cat=new String[womenlist.size()];
+                    String[] loc=new String[womenlist.size()];
+                    String[] phone=new String[womenlist.size()];
+                    String[]img=new String[womenlist.size()];
 
                     for (int i = 0; i < womenclothe.length; i++){
                         womenclothe[i] = womenlist.get(i).getName();
                     }
-                    ArrayAdapter adapter=new womenllistAdapter(womenList.this,android.R.layout.simple_list_item_1,womenclothe);
+                    for (int i = 0; i < cat.length; i++){
+                        Category categ = womenlist.get(i).getCategories().get(0);
+                        cat[i] =categ.getTitle();
+                    }
+                    for (int i = 0; i < loc.length; i++){
+                        Location locate=womenlist.get(i).getLocation();
+                        loc[i] = locate.getAddress1();
+                    }
+                    for (int i = 0; i < phone.length; i++){
+                        phone[i] = womenlist.get(i).getPhone();
+                    }
+
+                    BaseAdapter adapter=new womenllistAdapter(womenclothe,cat,loc,phone, womenList.this);
                     list1.setAdapter(adapter);
                     System.out.println(adapter);
                     showClothes();
