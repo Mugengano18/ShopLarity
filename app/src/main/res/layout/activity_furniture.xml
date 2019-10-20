@@ -6,18 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".models.furnitureActivity">
 
-    <TextView
+    <ListView
+        android:id="@+id/listviewfurn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Furnitures"
-        android:layout_centerHorizontal="true"
-        android:textSize="40dp"/>
-    <TextView
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone"
+        />
+    <ProgressBar
+        android:id="@+id/progressBarfurn"
+        style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="No furnitures for sale posted yet."
-        android:layout_centerHorizontal="true"
-        android:textSize="20dp"
-        android:layout_marginTop="100dp"/>
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/errorfurn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="16dp"
+        android:visibility="gone" />
 
 </RelativeLayout>

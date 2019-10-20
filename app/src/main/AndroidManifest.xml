@@ -24,11 +24,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.android1.shoplarity.models.HomeActivity" />
         </activity>
-        <activity android:name=".models.devicesActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.android1.shoplarity.models.HomeActivity" />
-        </activity>
         <activity android:name=".models.furnitureActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

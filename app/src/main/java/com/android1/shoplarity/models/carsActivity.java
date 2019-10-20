@@ -42,8 +42,8 @@ public class carsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_cars);
         ButterKnife.bind(this);
         carslist=(ListView)findViewById(R.id.listviewcars);
-        Api shoes= Client.getclient();
-        Call<Apiresponse> call=shoes.getCategory("cars","canada");
+        Api cars= Client.getclient();
+        Call<Apiresponse> call=cars.getCategory("cars","canada");
         call.enqueue(new Callback<Apiresponse>() {
             @Override
             public void onResponse(Call<Apiresponse> call, Response<Apiresponse> response) {

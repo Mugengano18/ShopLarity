@@ -21,8 +21,8 @@ import butterknife.ButterKnife;
 public class HomeActivity extends AppCompatActivity{
     @BindView(R.id.grid1)
     GridView imageGrid;
-    private String[]names={"Clothes","Shoes","Cars","Furniture","Devices","Phones","Antique"};
-    private int[] foto_id={R.drawable.foto1,R.drawable.foto2,R.drawable.foto3,R.drawable.foto4,R.drawable.foto5,R.drawable.foto6,R.drawable.foto7};
+    private String[]names={"Clothes","Shoes","Cars","Furniture","Phones","Antique"};
+    private int[] foto_id={R.drawable.foto1,R.drawable.foto2,R.drawable.foto3,R.drawable.foto4,R.drawable.foto6,R.drawable.foto7};
     @BindView(R.id.hello)
     TextView greet;
 
@@ -58,17 +58,14 @@ public class HomeActivity extends AppCompatActivity{
                         startActivity(intent4);
                         break;
                     case 4:
-                        Intent intent5=new Intent(HomeActivity.this, devicesActivity.class);
+                        Intent intent5=new Intent(HomeActivity.this, mobilephoneactivity.class);
                         startActivity(intent5);
                         break;
                     case 5:
-                        Intent intent6=new Intent(HomeActivity.this, mobilephoneactivity.class);
+                        Intent intent6=new Intent(HomeActivity.this, AntiquityActivity.class);
                         startActivity(intent6);
                         break;
-                    case 6:
-                        Intent intent7=new Intent(HomeActivity.this, AntiquityActivity.class);
-                        startActivity(intent7);
-                        break;
+
                 }
 
                 Toast.makeText(getApplicationContext(),((TextView) view.findViewById(R.id.textView)).getText(),Toast.LENGTH_SHORT).show();
