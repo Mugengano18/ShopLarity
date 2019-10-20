@@ -34,6 +34,7 @@ public class furnitureActivity extends AppCompatActivity {
     ProgressBar progressBarfurn;
     @BindView(R.id.errorfurn)
     TextView errorfurn;
+    public static final String Tag =HomeActivity.class.getSimpleName();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
