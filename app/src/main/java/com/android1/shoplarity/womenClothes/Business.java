@@ -35,7 +35,7 @@ public class Business {
     private List<Category> categories = null;
     @SerializedName("rating")
     @Expose
-    private Integer rating;
+    private double rating;
     @SerializedName("coordinates")
     @Expose
     private Coordinates coordinates;
@@ -84,7 +84,7 @@ public class Business {
      * @param id
      * @param categories
      */
-    public Business(String id, String alias, String name, String imageUrl, Boolean isClosed, String url, Integer reviewCount, List<Category> categories, Integer rating, Coordinates coordinates, List<Object> transactions, Location location, String phone, String displayPhone, Double distance, String price) {
+    public Business(String id, String alias, String name, String imageUrl, Boolean isClosed, String url, Integer reviewCount, List<Category> categories, double rating, Coordinates coordinates, List<Object> transactions, Location location, String phone, String displayPhone, Double distance, String price) {
         super();
         this.id = id;
         this.alias = alias;
@@ -168,11 +168,11 @@ public class Business {
         this.categories = categories;
     }
 
-    public Integer getRating() {
+    public double getRating() {
         return rating;
     }
 
-    public void setRating(Integer rating) {
+    public void setRating(double rating) {
         this.rating = rating;
     }
 

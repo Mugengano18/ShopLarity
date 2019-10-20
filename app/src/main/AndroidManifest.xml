@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".models.childrenList"></activity>
+        <activity android:name=".models.childrenList" />
         <activity android:name=".models.MenList" />
         <activity android:name=".models.womenList" />
         <activity android:name=".models.AntiquityActivity">

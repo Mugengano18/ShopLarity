@@ -8,7 +8,7 @@ import com.android1.shoplarity.womenClothes.Region;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Womenclothesresponse {
+public class Apiresponse {
 
     @SerializedName("businesses")
     @Expose
@@ -24,7 +24,7 @@ public class Womenclothesresponse {
      * No args constructor for use in serialization
      * 
      */
-    public Womenclothesresponse() {
+    public Apiresponse() {
     }
 
     /**
@@ -33,7 +33,7 @@ public class Womenclothesresponse {
      * @param region
      * @param businesses
      */
-    public Womenclothesresponse(List<Business> businesses, Integer total, Region region) {
+    public Apiresponse(List<Business> businesses, Integer total, Region region) {
         super();
         this.businesses = businesses;
         this.total = total;

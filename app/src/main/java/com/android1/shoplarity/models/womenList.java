@@ -13,11 +13,10 @@ import android.widget.TextView;
 
 import com.android1.shoplarity.Adapters.womenllistAdapter;
 import com.android1.shoplarity.R;
-import com.android1.shoplarity.network.womanClient;
-import com.android1.shoplarity.network.womenApi;
+import com.android1.shoplarity.network.Client;
+import com.android1.shoplarity.network.Api;
 import com.android1.shoplarity.womenClothes.Business;
-import com.android1.shoplarity.womenClothes.Category;
-import com.android1.shoplarity.womenClothes.Womenclothesresponse;
+import com.android1.shoplarity.womenClothes.Apiresponse;
 
 import java.util.List;
 
@@ -30,7 +29,6 @@ import retrofit2.Response;
 public class womenList extends AppCompatActivity {
     @BindView(R.id.listviewoman) ListView list1;
     private String[] womanlistt={"jeans","dress","trousers","skirts"};
-    private womenllistAdapter adapter;
     @BindView(R.id.progressBar1)
     ProgressBar bar1;
     @BindView(R.id.error)
@@ -45,11 +43,11 @@ public class womenList extends AppCompatActivity {
 //        list1.setAdapter(womenllistAdapter);
         Intent intent = getIntent();
 
-        womenApi clothe1= womanClient.getWclient();
-        Call<Womenclothesresponse> call=clothe1.getWomenClothes("women clothes","canada","women  clothes");
-        call.enqueue(new Callback<Womenclothesresponse>() {
+        Api clothe1= Client.getclient();
+        Call<Apiresponse> call=clothe1.getCategory("women clothes","canada");
+        call.enqueue(new Callback<Apiresponse>() {
             @Override
-            public void onResponse(Call<Womenclothesresponse> call, Response<Womenclothesresponse> response) {
+            public void onResponse(Call<Apiresponse> call, Response<Apiresponse> response) {
                 hideProgressbar();
                 if(response.isSuccessful()){
                     List<Business>womenlist = response.body().getBusinesses();
@@ -68,7 +66,7 @@ public class womenList extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<Womenclothesresponse> call, Throwable t) {
+            public void onFailure(Call<Apiresponse> call, Throwable t) {
                 Log.e(Tag,"onFailure:",t);
                 hideProgressbar();
                 failureSms();
