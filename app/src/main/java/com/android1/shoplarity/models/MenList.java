@@ -14,8 +14,8 @@ import com.android1.shoplarity.Adapters.menadapter;
 import com.android1.shoplarity.R;
 import com.android1.shoplarity.network.Api;
 import com.android1.shoplarity.network.Client;
-import com.android1.shoplarity.womenClothes.Apiresponse;
-import com.android1.shoplarity.womenClothes.Business;
+import com.android1.shoplarity.Apifolder.Apiresponse;
+import com.android1.shoplarity.Apifolder.Business;
 
 import java.util.List;
 
@@ -40,7 +40,7 @@ public class MenList extends AppCompatActivity {
         ButterKnife.bind(this);
 
         Api clothe2= Client.getclient();
-        Call<Apiresponse>call=clothe2.getCategory("restaurants","canada");
+        Call<Apiresponse>call=clothe2.getCategory("men clothes","canada");
         call.enqueue(new Callback<Apiresponse>() {
             @Override
             public void onResponse(Call<Apiresponse> call, Response<Apiresponse> response) {

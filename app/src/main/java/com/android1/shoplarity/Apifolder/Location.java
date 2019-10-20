@@ -1,5 +1,5 @@
 
-package com.android1.shoplarity.womenClothes;
+package com.android1.shoplarity.Apifolder;
 
 import java.util.List;
 import com.google.gson.annotations.Expose;

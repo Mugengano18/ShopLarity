@@ -1,6 +1,6 @@
 package com.android1.shoplarity.network;
 
-import com.android1.shoplarity.womenClothes.Apiresponse;
+import com.android1.shoplarity.Apifolder.Apiresponse;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

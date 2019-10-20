@@ -1,7 +1,6 @@
 
-package com.android1.shoplarity.womenClothes;
+package com.android1.shoplarity.Apifolder;
 
-import com.android1.shoplarity.womenClothes.Center;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 

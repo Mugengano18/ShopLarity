@@ -1,10 +1,8 @@
 
-package com.android1.shoplarity.womenClothes;
+package com.android1.shoplarity.Apifolder;
 
 import java.util.List;
 
-import com.android1.shoplarity.womenClothes.Business;
-import com.android1.shoplarity.womenClothes.Region;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
