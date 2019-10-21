@@ -46,9 +46,10 @@ public class womenList extends AppCompatActivity {
 //        womenllistAdapter womenllistAdapter=new womenllistAdapter(this,android.R.layout.simple_list_item_1, womenclothe, womanlistt);
 //        list1.setAdapter(womenllistAdapter);
         Intent intent = getIntent();
-
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        //the following codes are used to call objects from the ApiResponse
         Api clothe1= Client.getclient();
-        Call<Apiresponse> call=clothe1.getCategory("women clothes","canada");
+        Call<Apiresponse> call=clothe1.getCategory("women clothes","USA");
         call.enqueue(new Callback<Apiresponse>() {
             @Override
             public void onResponse(Call<Apiresponse> call, Response<Apiresponse> response) {
@@ -60,6 +61,7 @@ public class womenList extends AppCompatActivity {
                     String[] loc=new String[womenlist.size()];
                     String[] phone=new String[womenlist.size()];
                     String[]img=new String[womenlist.size()];
+                    String[]rate=new String[womenlist.size()];
 
                     for (int i = 0; i < womenclothe.length; i++){
                         womenclothe[i] = womenlist.get(i).getName();
@@ -75,9 +77,15 @@ public class womenList extends AppCompatActivity {
                     for (int i = 0; i < phone.length; i++){
                         phone[i] = womenlist.get(i).getPhone();
                     }
-
-                    BaseAdapter adapter=new womenllistAdapter(womenclothe,cat,loc,phone, womenList.this);
+                    for (int i = 0; i < img.length; i++){
+                        img[i] = womenlist.get(i).getImageUrl();
+                    }
+                    for (int i = 0; i < rate.length; i++){
+                        rate[i] = womenlist.get(i).getRating();
+                    }
+                    BaseAdapter adapter=new womenllistAdapter(womenclothe,cat,loc,phone,img,rate,womenList.this);
                     list1.setAdapter(adapter);
+
                     System.out.println(adapter);
                     showClothes();
                 }else {

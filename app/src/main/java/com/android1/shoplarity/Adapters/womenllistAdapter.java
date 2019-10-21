@@ -4,31 +4,43 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import androidx.annotation.NonNull;
-
 import com.android1.shoplarity.R;
+import com.squareup.picasso.Picasso;
+
+
 
 public class womenllistAdapter extends BaseAdapter {
     private String[] womenclothess;
     private String[] wCategory;
     private String[] wLocation;
     private String[] wPhone;
-    private double[] wRating;
+    private String[] wRating;
     private  String[] wImageview;
     private Context context;
 
-    public womenllistAdapter(String[] womenclothess, String[] wCategory, String[] wLocation, String[] wPhone, Context context) {
+
+
+
+    public womenllistAdapter(String[] womenclothess, String[] wCategory, String[] wLocation, String[] wPhone, String[] wImageview, String[] wRating, Context context) {
         this.womenclothess = womenclothess;
         this.wCategory = wCategory;
         this.wLocation = wLocation;
         this.wPhone = wPhone;
-//        this.wRating = wRating;
-//        this.wImageview = wImageview;
+        this.wRating = wRating;
+        this.wImageview = wImageview;
+        this.context = context;
+    }
+
+
+
+    public Context getContext() {
+        return context;
+    }
+
+    public void setContext(Context context) {
         this.context = context;
     }
 
@@ -62,10 +74,12 @@ public class womenllistAdapter extends BaseAdapter {
         loc.setText(wLocation[position]);
         TextView phone=(TextView)woman_view.findViewById(R.id.woman3);
         phone.setText(wPhone[position]);
-//        TextView rate=(TextView)woman_view.findViewById(R.id.woman4);
-//        rate.setText((int) wRating[position]);
-//        ImageView image1=(ImageView)woman_view.findViewById(R.id.womanImg);
-//        image1.setImageResource(Integer.parseInt(wImageview[position]));
+        TextView rate=(TextView)woman_view.findViewById(R.id.woman4);
+        rate.setText( "rate:"+wRating[position]);
+        ImageView image1=(ImageView)woman_view.findViewById(R.id.womanImg);
+
+        Picasso.get().load(wImageview[position]).into(image1);//this is done by the Technical mentor
         return woman_view;
     }
+
 }
