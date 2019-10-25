@@ -32,7 +32,7 @@ public class HomeActivity extends AppCompatActivity{
         setContentView(R.layout.activity_home);
         ButterKnife.bind(this);
         Intent intent=getIntent();
-        String greeting = intent.getStringExtra("name");
+//        String greeting = intent.getStringExtra("name");
         categoryAdapter categoryAdapter=new categoryAdapter(HomeActivity.this,foto_id,names);
         imageGrid.setAdapter(categoryAdapter);
         imageGrid.setOnItemClickListener(new OnItemClickListener() {
@@ -71,7 +71,7 @@ public class HomeActivity extends AppCompatActivity{
                 Toast.makeText(getApplicationContext(),((TextView) view.findViewById(R.id.textView)).getText(),Toast.LENGTH_SHORT).show();
             }
         });
-        greet.setText("Welcome  "+greeting);//this is the name entered by the user
+        greet.setText("Welcome  ");//this is the name entered by the user
 
 
     }
