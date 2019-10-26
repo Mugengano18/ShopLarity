@@ -40,13 +40,13 @@ public class menadapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         View men_view=convertView;
 
-        if(men_view==null){
-            LayoutInflater insert =(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            men_view=insert.inflate(R.layout.menlist2,null);
-        }
-
-        TextView text=(TextView)men_view.findViewById(R.id.men1);
-        text.setText(menClothes[position]);
+//        if(men_view==null){
+//            LayoutInflater insert =(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+//            men_view=insert.inflate(R.layout.menlist2,null);
+//        }
+//
+//        TextView text=(TextView)men_view.findViewById(R.id.men1);
+//        text.setText(menClothes[position]);
         return men_view;
     }
 }
