@@ -6,23 +6,45 @@
     android:layout_height="match_parent"
     tools:context=".models.ShoesActivity">
 
-    <ListView
-        android:id="@+id/listview2"
+<!--    <ListView-->
+<!--        android:id="@+id/listview2"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:visibility="gone"-->
+<!--        />-->
+<!--    <ProgressBar-->
+<!--        android:id="@+id/progressBar5"-->
+<!--        style="?android:attr/progressBarStyle"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerInParent="true" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/error5"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:layout_margin="16dp"-->
+<!--        android:visibility="gone" />-->
+
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:visibility="gone"
+        android:padding="10dp"
+        android:id="@+id/recycler_view1"
         />
+
     <ProgressBar
-        android:id="@+id/progressBar5"
+        android:id="@+id/progressBar1"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true" />
 
     <TextView
-        android:id="@+id/error5"
+        android:id="@+id/error"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
