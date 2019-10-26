@@ -45,8 +45,8 @@ public class carsAdapter extends BaseAdapter {
             LayoutInflater insert=(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             car_view=insert.inflate(R.layout.carslist,null);
         }
-        TextView text2=(TextView)car_view.findViewById(R.id.cars1);
-        text2.setText(cars[position]);
+//        TextView text2=(TextView)car_view.findViewById(R.id.cars1);
+//        text2.setText(cars[position]);
         return car_view;
     }
 }
