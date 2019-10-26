@@ -40,8 +40,8 @@ public class furnitureAdapter extends BaseAdapter {
             LayoutInflater insert=(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             furn_view=insert.inflate(R.layout.furniturelist,null);
         }
-        TextView text3=(TextView)furn_view.findViewById(R.id.furn);
-        text3.setText(furn[position]);
+//        TextView text3=(TextView)furn_view.findViewById(R.id.furn);
+//        text3.setText(furn[position]);
         return furn_view;
     }
 }
