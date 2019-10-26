@@ -6,17 +6,20 @@ import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import org.parceler.Parcel;
+
+@Parcel
 public class Apiresponse {
 
     @SerializedName("businesses")
     @Expose
-    private List<Business> businesses = null;
+    public List<Business> businesses = null;
     @SerializedName("total")
     @Expose
-    private Integer total;
+    public Integer total;
     @SerializedName("region")
     @Expose
-    private Region region;
+    public Region region;
 
     /**
      * No args constructor for use in serialization

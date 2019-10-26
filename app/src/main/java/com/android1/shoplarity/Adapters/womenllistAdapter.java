@@ -1,6 +1,7 @@
 package com.android1.shoplarity.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +14,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.android1.shoplarity.Apifolder.Business;
 import com.android1.shoplarity.R;
+import com.android1.shoplarity.models.WomenDetailFragment;
+import com.android1.shoplarity.models.clothedetails;
 import com.squareup.picasso.Picasso;
+
+import org.parceler.Parcels;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -126,8 +131,8 @@ public class womenllistAdapter extends RecyclerView.Adapter<womenllistAdapter.wo
         return womenclothess.size();
     }
 
-    class womanViewHolder extends RecyclerView.ViewHolder{
-        //creating the ui elemnt
+    class womanViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+        //creating the ui element
         @BindView(R.id.womanImg) ImageView image1;
         @BindView(R.id.storename)TextView text5;
         @BindView(R.id.category)TextView cat;
@@ -135,13 +140,13 @@ public class womenllistAdapter extends RecyclerView.Adapter<womenllistAdapter.wo
         @BindView(R.id.phonen)TextView phone;
         @BindView(R.id.rate)TextView rate;
 
-        private Context context;
+        private Context cont;
         public womanViewHolder(@NonNull View itemView) {
             super(itemView);
             //accessing the views from itemview
             ButterKnife.bind(this,itemView);
             context=itemView.getContext();
-
+            itemView.setOnClickListener(this);
         }
 
 
@@ -152,6 +157,15 @@ public class womenllistAdapter extends RecyclerView.Adapter<womenllistAdapter.wo
             phone.setText(business.getPhone());
             rate.setText("rate " + String.valueOf(business.getRating()));
             Picasso.get().load(business.getImageUrl()).into(image1);
+        }
+
+        @Override
+        public void onClick(View v) {
+            int pos=getLayoutPosition();
+            Intent intent=new Intent(context, clothedetails.class);
+            intent.putExtra("position",pos);
+            intent.putExtra("clothess", Parcels.wrap(womenclothess));
+            context.startActivity(intent);
         }
     }
 

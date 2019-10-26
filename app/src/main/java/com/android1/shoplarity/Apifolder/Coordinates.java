@@ -6,15 +6,15 @@ import com.google.gson.annotations.SerializedName;
 
 import org.parceler.Parcel;
 
-
+@Parcel
 public class Coordinates {
 
     @SerializedName("latitude")
     @Expose
-    private Double latitude;
+    public Double latitude;
     @SerializedName("longitude")
     @Expose
-    private Double longitude;
+    public Double longitude;
 
     /**
      * No args constructor for use in serialization

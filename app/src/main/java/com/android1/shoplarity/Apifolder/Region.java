@@ -6,12 +6,12 @@ import com.google.gson.annotations.SerializedName;
 
 import org.parceler.Parcel;
 
-
+@Parcel
 public class Region {
 
     @SerializedName("center")
     @Expose
-    private Center center;
+    public Center center;
 
     /**
      * No args constructor for use in serialization

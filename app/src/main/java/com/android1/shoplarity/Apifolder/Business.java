@@ -9,57 +9,57 @@ import com.google.gson.annotations.SerializedName;
 
 import org.parceler.Parcel;
 
-
+@Parcel
 public class Business {
 
     @SerializedName("id")
     @Expose
-    private String id;
+    public String id;
     @SerializedName("alias")
     @Expose
-    private String alias;
+    public String alias;
     @SerializedName("name")
     @Expose
-    private String name;
+    public String name;
     @SerializedName("image_url")
     @Expose
-    private String imageUrl;
+    public String imageUrl;
     @SerializedName("is_closed")
     @Expose
-    private Boolean isClosed;
+    public Boolean isClosed;
     @SerializedName("url")
     @Expose
-    private String url;
+    public String url;
     @SerializedName("review_count")
     @Expose
-    private Integer reviewCount;
+    public Integer reviewCount;
     @SerializedName("categories")
     @Expose
-    private List<Category> categories = null;
+    public List<Category> categories = null;
     @SerializedName("rating")
     @Expose
-    private String rating;
+    public String rating;
     @SerializedName("coordinates")
     @Expose
-    private Coordinates coordinates;
+    public Coordinates coordinates;
     @SerializedName("transactions")
     @Expose
-    private List<Object> transactions = null;
+    public List<String> transactions = null;
     @SerializedName("location")
     @Expose
-    private Location location;
+    public Location location;
     @SerializedName("phone")
     @Expose
-    private String phone;
+    public String phone;
     @SerializedName("display_phone")
     @Expose
-    private String displayPhone;
+    public String displayPhone;
     @SerializedName("distance")
     @Expose
-    private Double distance;
+    public Double distance;
     @SerializedName("price")
     @Expose
-    private String price;
+    public String price;
 
     /**
      * No args constructor for use in serialization
@@ -87,7 +87,7 @@ public class Business {
      * @param id
      * @param categories
      */
-    public Business(String id, String alias, String name, String imageUrl, Boolean isClosed, String url, Integer reviewCount, List<Category> categories, String rating, Coordinates coordinates, List<Object> transactions, Location location, String phone, String displayPhone, Double distance, String price) {
+    public Business(String id, String alias, String name, String imageUrl, Boolean isClosed, String url, Integer reviewCount, List<Category> categories, String rating, Coordinates coordinates, List<String> transactions, Location location, String phone, String displayPhone, Double distance, String price) {
         super();
         this.id = id;
         this.alias = alias;
@@ -187,11 +187,11 @@ public class Business {
         this.coordinates = coordinates;
     }
 
-    public List<Object> getTransactions() {
+    public List<String> getTransactions() {
         return transactions;
     }
 
-    public void setTransactions(List<Object> transactions) {
+    public void setTransactions(List<String> transactions) {
         this.transactions = transactions;
     }
 

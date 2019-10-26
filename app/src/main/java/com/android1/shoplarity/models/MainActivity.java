@@ -17,8 +17,8 @@ import butterknife.ButterKnife;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     @BindView(R.id.getStarted)
     Button  getStarted;
-    @BindView(R.id.name)
-    EditText name;
+//    @BindView(R.id.name)
+//    EditText name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +32,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {//these codes will direct you to the next activity
         if (v== getStarted){
-            String names =name.getText().toString();
+//            String names =name.getText().toString();
             Intent intention =new Intent(MainActivity.this, HomeActivity.class);
-            intention.putExtra("name",names);
+//            intention.putExtra("name",names);
             startActivity(intention);
         }
     }
