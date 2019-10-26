@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {//these codes will direct you to the next activity
         if (v== getStarted){
 //            String names =name.getText().toString();
-            Intent intention =new Intent(MainActivity.this, HomeActivity.class);
+            Intent intention =new Intent(MainActivity.this, LoginActivity.class);
 //            intention.putExtra("name",names);
             startActivity(intention);
         }

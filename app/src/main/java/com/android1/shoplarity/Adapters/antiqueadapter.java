@@ -40,8 +40,8 @@ public class antiqueadapter extends BaseAdapter {
             LayoutInflater insert=(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             antiqe_view=insert.inflate(R.layout.antiquelist,null);
         }
-        TextView text5=(TextView)antiqe_view.findViewById(R.id.antique);
-        text5.setText(antique[position]);
+//        TextView text5=(TextView)antiqe_view.findViewById(R.id.antique);
+//        text5.setText(antique[position]);
         return antiqe_view;
     }
 }
