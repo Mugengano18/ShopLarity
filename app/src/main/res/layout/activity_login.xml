@@ -16,33 +16,31 @@
         android:id="@+id/linearLayout">
 
         <EditText
-            android:id="@+id/emailEditText"
+            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/white"
             android:hint="Email"
             android:inputType="textEmailAddress"
-            android:nextFocusDown="@+id/passwordEditText"
             android:padding="10dp"
             android:layout_marginBottom="10dp"
             android:textColor="@android:color/black"
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/passwordEditText"
+            android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/white"
             android:hint="Password"
             android:inputType="textPassword"
-            android:nextFocusDown="@+id/passwordEditText"
             android:padding="10dp"
             android:textColor="@android:color/black"
             android:textSize="20sp" />
 
 
         <Button
-            android:id="@+id/passwordLoginButton"
+            android:id="@+id/LoginButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
@@ -58,7 +56,7 @@
             android:textStyle="bold"
             android:textSize="15sp"
             android:text="Don't have an account? Sign up here!"
-            android:id="@+id/registerTextView"
+            android:id="@+id/registerText"
             android:layout_gravity="center_horizontal" />
 
     </LinearLayout>
@@ -66,7 +64,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
+        android:text="Sign in"
         android:textSize="30dp"
         android:textStyle="bold"
         android:layout_above="@+id/linearLayout"
