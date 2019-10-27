@@ -6,7 +6,7 @@
 
 ## Sample images
 
-<img src="drawable/pic1.png">
+<img src="/home/wecode/AndroidStudioProjects/ShopLarity/app/src/main/res/drawable/pic1.png">
 
 
 
