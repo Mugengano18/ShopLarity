@@ -7,6 +7,9 @@
 ## Sample images
 
 <img src="drawable/pic1.png">
+
+
+
 ## App Installation
 
 - In case you want to install or to get a the app by this time it is not finished yet but in few weeks it will be done
