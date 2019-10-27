@@ -1,12 +1,12 @@
 # ShopLarity
-- this is an App where by there will be selling and buying of different used productsfrom anyone who wants to give away his/her products.
+- This is an App that is used to search for any store the user wants depending on his/her needs and mainly the stores in the united states
 
 ## Author
 - Mugengano Alice
 
 ## Sample images
 
-<img src="/home/wecode/AndroidStudioProjects/ShopLarity/app/src/main/res/drawable/pic1.png">
+<img src="/main/res/drawable/pic1.png">
 
 
 
