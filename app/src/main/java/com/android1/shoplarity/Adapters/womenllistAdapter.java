@@ -2,17 +2,24 @@ package com.android1.shoplarity.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android1.shoplarity.Apifolder.Business;
 import com.android1.shoplarity.R;
+import com.android1.shoplarity.models.HomeActivity;
+import com.android1.shoplarity.models.LoginActivity;
+import com.android1.shoplarity.models.Singleinfo;
+import com.google.firebase.database.core.Tag;
 import com.squareup.picasso.Picasso;
 
 import org.parceler.Parcels;
@@ -99,6 +106,7 @@ import butterknife.ButterKnife;
 
 
 public class womenllistAdapter extends RecyclerView.Adapter<womenllistAdapter.womanViewHolder>{
+
     private Context context;
     private List<Business> womenclothess;
 
@@ -119,6 +127,18 @@ public class womenllistAdapter extends RecyclerView.Adapter<womenllistAdapter.wo
     @Override
     public void onBindViewHolder(@NonNull womanViewHolder holder, int position) {
         holder.bindList(womenclothess.get(position));
+        holder.parent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context,womenclothess.get(position).getName(),Toast.LENGTH_LONG).show();
+                Intent intent =new Intent(context, Singleinfo.class);
+                intent.putExtra("image",womenclothess.get(position).getImageUrl());
+                intent.putExtra("Name Store",womenclothess.get(position).getName());
+                intent.putExtra("cat",womenclothess.get(position).getCategories().get(0).getTitle());
+                intent.putExtra("rate",String.valueOf(womenclothess.get(position).getRating()));
+                context.startActivity(intent);
+            }
+        });
 
     }
 
@@ -135,6 +155,8 @@ public class womenllistAdapter extends RecyclerView.Adapter<womenllistAdapter.wo
         @BindView(R.id.location)TextView loc;
         @BindView(R.id.phonen)TextView phone;
         @BindView(R.id.rate)TextView rate;
+        @BindView(R.id.ParentLayout)
+        RelativeLayout parent;
 
         private Context cont;
         public womanViewHolder(@NonNull View itemView) {
