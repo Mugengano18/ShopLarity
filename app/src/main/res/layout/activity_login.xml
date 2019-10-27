@@ -6,6 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".models.LoginActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign in"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_above="@+id/linearLayout"
+        android:layout_centerHorizontal="true" />
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -61,12 +70,5 @@
 
     </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sign in"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        android:layout_above="@+id/linearLayout"
-        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>

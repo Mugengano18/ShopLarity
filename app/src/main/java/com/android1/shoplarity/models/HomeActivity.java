@@ -1,5 +1,6 @@
 package com.android1.shoplarity.models;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -18,6 +19,7 @@ import android.widget.Toast;
 import com.android1.shoplarity.Adapters.categoryAdapter;
 import com.android1.shoplarity.R;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -29,6 +31,8 @@ public class HomeActivity extends AppCompatActivity{
     private int[] foto_id={R.drawable.foto1,R.drawable.foto2,R.drawable.foto3,R.drawable.foto4,R.drawable.foto6,R.drawable.foto7};
     @BindView(R.id.hello)
     TextView greet;
+    private  FirebaseAuth Auth;
+    private FirebaseAuth.AuthStateListener AuthListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,8 +78,31 @@ public class HomeActivity extends AppCompatActivity{
             }
         });
         greet.setText("Welcome  ");//this is the name entered by the user
+
+        Auth=FirebaseAuth.getInstance();
+        AuthListener=new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser client=firebaseAuth.getCurrentUser();
+                if(client != null){
+                    getSupportActionBar().setTitle(client.getDisplayName());
+                }
+            }
+        };
+    }
+    @Override
+    public void onStart(){
+        super.onStart();
+        Auth.addAuthStateListener(AuthListener);
     }
 
+    @Override
+    public void onStop(){
+        super.onStop();
+        if(AuthListener != null){
+            Auth.removeAuthStateListener(AuthListener);
+        }
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
