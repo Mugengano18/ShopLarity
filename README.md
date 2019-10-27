@@ -6,14 +6,14 @@
 
 ## Sample images
 
-<img src="/main/res/drawable/pic1.png">
+<img src="http:/main/res/drawable/pic1.png">
 
 
 
 ## App Installation
 
 - In case you want to install or to get a the app by this time it is not finished yet but in few weeks it will be done
-- In case you want reference just look at this link https://github.com/Mugengano18/ShopLarity
+- In case you want reference just look at this link [GitHub](https://github.com/Mugengano18/ShopLarity)
 
 ## Description(Application setup)
 
