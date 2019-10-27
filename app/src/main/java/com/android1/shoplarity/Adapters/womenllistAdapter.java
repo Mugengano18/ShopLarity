@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -14,13 +13,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.android1.shoplarity.Apifolder.Business;
 import com.android1.shoplarity.R;
-import com.android1.shoplarity.models.WomenDetailFragment;
-import com.android1.shoplarity.models.clothedetails;
 import com.squareup.picasso.Picasso;
 
 import org.parceler.Parcels;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -161,11 +157,7 @@ public class womenllistAdapter extends RecyclerView.Adapter<womenllistAdapter.wo
 
         @Override
         public void onClick(View v) {
-            int pos=getLayoutPosition();
-            Intent intent=new Intent(context, clothedetails.class);
-            intent.putExtra("position",pos);
-            intent.putExtra("clothess", Parcels.wrap(womenclothess));
-            context.startActivity(intent);
+
         }
     }
 

@@ -7,17 +7,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.BaseAdapter;
-import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.android1.shoplarity.Adapters.carsAdapter;
 import com.android1.shoplarity.Adapters.womenllistAdapter;
 import com.android1.shoplarity.Apifolder.Apiresponse;
 import com.android1.shoplarity.Apifolder.Business;
 import com.android1.shoplarity.R;
-import com.android1.shoplarity.Adapters.mobileAdapter;
 import com.android1.shoplarity.network.Api;
 import com.android1.shoplarity.network.Client;
 

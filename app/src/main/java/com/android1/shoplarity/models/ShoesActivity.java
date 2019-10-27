@@ -7,12 +7,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.android1.shoplarity.Adapters.shoesAdapter;
 import com.android1.shoplarity.Adapters.womenllistAdapter;
 import com.android1.shoplarity.Apifolder.Apiresponse;
 import com.android1.shoplarity.Apifolder.Business;

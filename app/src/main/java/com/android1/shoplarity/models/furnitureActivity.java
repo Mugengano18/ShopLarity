@@ -7,12 +7,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.BaseAdapter;
-import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.android1.shoplarity.Adapters.carsAdapter;
 import com.android1.shoplarity.Adapters.womenllistAdapter;
 import com.android1.shoplarity.Apifolder.Apiresponse;
 import com.android1.shoplarity.Apifolder.Business;
@@ -28,8 +25,6 @@ import butterknife.ButterKnife;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-
-import static com.android1.shoplarity.models.carsActivity.Tag;
 
 public class furnitureActivity extends AppCompatActivity {
 //    @BindView(R.id.listviewfurn)
