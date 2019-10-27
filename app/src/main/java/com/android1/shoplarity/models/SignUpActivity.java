@@ -21,6 +21,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -93,12 +94,29 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     }
 
 
+    //I am going to set the username
+    private void  createFirebaseUser(final FirebaseUser user){
+        UserProfileChangeRequest profileName=new UserProfileChangeRequest.Builder()
+                .setDisplayName(Name).build();
+
+        user.updateProfile(profileName).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if(task.isSuccessful()){
+                    Log.d(TAG, user.getDisplayName());
+                }
+            }
+        });
+        
+    }
     //this is creating a new user
     private void NewUser(){
+        Name=name.getText().toString().trim();
         final  String name1= name.getText().toString().trim();
         final  String email1= email.getText().toString().trim();
         final  String pass1= password.getText().toString().trim();
         final  String confirm1= confirmpass.getText().toString().trim();
+        boolean validName2=isNameValid(Name);
         boolean validName= isNameValid(name1);
         boolean validEmail=isEmailValid(email1);
         if (!validEmail || !validName  ) return;
@@ -111,6 +129,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "createUserWithEmail:success");
+                            createFirebaseUser(task.getResult().getUser());//this is catching the name and saving it into the logcat
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "createUserWithEmail:failure", task.getException());
