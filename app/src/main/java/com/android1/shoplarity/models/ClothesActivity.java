@@ -8,7 +8,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
+import android.widget.TextView;
 
+import com.android1.shoplarity.Adapters.clothesAdapter;
 import com.android1.shoplarity.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
