@@ -2,13 +2,15 @@
 - this is an App where by there will be selling and buying of different used productsfrom anyone who wants to give away his/her products.
 
 ## Author
-- Mugengano18
+- Mugengano Alice
 
+## Sample images
 
+<img src="drawable/pic1.png">
 ## App Installation
 
 - In case you want to install or to get a the app by this time it is not finished yet but in few weeks it will be done
-- In case you want reference just look at this link [Shoplarity][https://github.com/Mugengano18/ShopLarity]
+- In case you want reference just look at this link https://github.com/Mugengano18/ShopLarity
 
 ## Description(Application setup)
 
@@ -21,6 +23,9 @@
 - Java
 - Android studio editor
 - Xml
+-Picasso
+-Retrofit
+-OkHttp
 
 ## Contacts
 
