@@ -6,7 +6,7 @@
 
 ## Sample images
 
-<img src="/readmeimg/pic2.png">
+<img src="/readmeimg/pic1.png">
 
 
 
