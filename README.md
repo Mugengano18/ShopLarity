@@ -6,7 +6,7 @@
 
 ## Sample images
 
-<img src="http:/main/res/drawable/pic1.png">
+<img src="/readmeimg/pic2.png">
 
 
 
@@ -27,7 +27,9 @@
 - Android studio editor
 - Xml
 -Picasso
+
 -Retrofit
+
 -OkHttp
 
 ## Contacts
