@@ -1,12 +1,16 @@
 package com.android1.shoplarity.models;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -42,10 +46,10 @@ public class Singleinfo extends AppCompatActivity implements View.OnClickListene
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_singleinfo);
-        Intent intent = getIntent();
-
-
+//        Intent intent = getIntent();
     }
+
+
 
     @Override
     public void onClick(View v) {
