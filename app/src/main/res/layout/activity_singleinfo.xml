@@ -40,12 +40,28 @@
             android:id="@+id/rate"/>
 
 
-
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="470dp"
+            android:layout_height="match_parent"
             android:background="@color/purple"
             >
+
+            <Button
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorPrimaryDark"
+                android:text="Add to favorite"
+                android:id="@+id/saveButton" />
+
+            <Button
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:background="@color/colorPrimaryDark"
+                android:text="Get help"
+                android:id="@+id/help"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -83,22 +99,9 @@
                 android:padding="10dp"
                 android:layout_marginTop="60dp"/>
 
-            <Button
-                android:layout_width="210dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:background="@color/colorPrimaryDark"
-                android:text="Add to favorite"
-                android:id="@+id/saveButton"/>
 
-            <Button
-                android:layout_width="210dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:background="@color/colorPrimaryDark"
-                android:text="Get help"
-                android:id="@+id/help"/>
+
+
         </RelativeLayout>
 
 

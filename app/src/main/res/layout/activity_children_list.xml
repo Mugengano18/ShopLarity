@@ -6,29 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".models.childrenList">
 
-<!--    <ListView-->
-<!--        android:id="@+id/listchildren"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_alignParentRight="true"-->
-<!--        android:layout_alignParentEnd="true"-->
-<!--        android:visibility="gone"-->
-<!--        />-->
-
-<!--    <ProgressBar-->
-<!--        android:id="@+id/progressBar4"-->
-<!--        style="?android:attr/progressBarStyle"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_centerInParent="true" />-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/error4"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_centerInParent="true"-->
-<!--        android:layout_margin="16dp"-->
-<!--        android:visibility="gone" />-->
 
 
 
