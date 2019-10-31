@@ -2,6 +2,7 @@ package com.android1.shoplarity.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -50,12 +51,9 @@ public class womenllistAdapter extends RecyclerView.Adapter<womenllistAdapter.wo
             @Override
             public void onClick(View v) {
                 Toast.makeText(context,womenclothess.get(position).getName(),Toast.LENGTH_LONG).show();
-                Intent intent =new Intent(context, Singleinfo.class);
-                intent.putExtra("image",womenclothess.get(position).getImageUrl());
-                intent.putExtra("Name Store",womenclothess.get(position).getName());
-                intent.putExtra("cat",womenclothess.get(position).getCategories().get(0).getTitle());
-                intent.putExtra("rate",String.valueOf(womenclothess.get(position).getRating()));
-                context.startActivity(intent);
+                Intent webIntent = new Intent(Intent.ACTION_VIEW,
+                        Uri.parse(womenclothess.get(position).getUrl()));
+                context.startActivity(webIntent);
             }
         });
 
